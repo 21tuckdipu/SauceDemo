@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 //import java.lang.classfile.instruction.SwitchCase;
 import java.sql.Connection;
-import java.sql.Driver;
+//import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -15,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByClassName;
+//import org.openqa.selenium.By.ByClassName;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -91,7 +91,7 @@ public class CheckOut {
 			case "checkOut":
 				WebElement checkout = wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout")));
 				checkout.click();
-				Thread.sleep(2000);
+//				Thread.sleep(2000);
 				System.out.println("checkoutI am Done");
 			    break;
 			case "firstName":
