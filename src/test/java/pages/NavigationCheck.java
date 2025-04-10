@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NavigationCheck {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com/");
@@ -78,7 +78,7 @@ public class NavigationCheck {
 				WebElement cart = driver.findElement(By.className("shopping_cart_link"));
 				cart.click();
 				try {
-					Thread.sleep(2000);
+//					Thread.sleep(2000);
 					break;
 				}
 				catch (Exception e){
