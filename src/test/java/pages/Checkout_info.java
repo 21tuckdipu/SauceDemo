@@ -40,15 +40,15 @@ public class Checkout_info {
 			ResultSet res = st.executeQuery(query);
 			
 			while (res.next()) {
-				sql_user = res.getString(1).toString();
-				sql_pass = res.getString(2).toString();
+				sql_user = res.getString(1);
+				sql_pass = res.getString(2);
 			}
 			st.close();
 			conn.close();
 		}
 		catch (Exception e) {
 			System.out.println("Connection not Established");
-			System.out.println(e.toString());
+			System.out.println(e);
 		}
 		
 		FileInputStream reader = new FileInputStream("D:\\quash\\RelatedDoc\\Framework_repos\\sauceDemo.xlsx");
@@ -56,6 +56,7 @@ public class Checkout_info {
 		System.out.println(workbook);
 		XSSFSheet sheet = workbook.getSheet("infoKDF");
 		XSSFSheet sheet02 = workbook.getSheet("infoCheckout");
+		System.out.println(sheet02);
 		
 		
 		for (int i = 1; i <=sheet.getLastRowNum() ; i++) {
