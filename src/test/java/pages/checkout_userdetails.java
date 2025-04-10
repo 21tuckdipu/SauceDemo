@@ -83,7 +83,7 @@ public class checkout_userdetails {
 				C = zip.toString();
 				
 				driver.navigate().back();
-				System.out.println("USERNAME : "+username.toString()+"PASSWORD : "+password.toString()+" ZIPCODE : "+zip);
+				System.out.println("USERNAME : "+username+"PASSWORD : "+password+" ZIPCODE : "+zip);
 				
 				//HERE WE WILL VALIDATE THE OPTIONS
 				
@@ -99,7 +99,7 @@ public class checkout_userdetails {
 			}
 			catch (Exception e) {
 				System.out.println("FAILS");
-				System.out.println("USERNAME : "+username.toString()+"PASSWORD : "+password.toString()+" ZIPCODE : "+zip);
+				System.out.println("USERNAME : "+username+"PASSWORD : "+password+" ZIPCODE : "+zip);
 			}
 			
 			
