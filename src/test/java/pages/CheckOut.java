@@ -48,8 +48,8 @@ public class CheckOut {
 			ResultSet res = st.executeQuery(query);
 			
 		    while (res.next()) {
-				sql_username = res.getString(1).toString();
-				sql_password = res.getString(2).toString();
+				sql_username = res.getString(1);
+				sql_password = res.getString(2);
 				System.out.println("USERNAME : "+sql_username+" PASSWORD : "+sql_password);
 			}
 	        st.close();
