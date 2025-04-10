@@ -3,7 +3,7 @@ package pages;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Iterator;
+//import java.util.Iterator;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -77,8 +77,14 @@ public class NavigationCheck {
 				System.out.println("cat");
 				WebElement cart = driver.findElement(By.className("shopping_cart_link"));
 				cart.click();
-				Thread.sleep(2000);
-				break;
+				try {
+					Thread.sleep(2000);
+					break;
+				}
+				catch (Exception e){
+					System.out.println("Thread not Invoked");
+				}
+
             case "continueShopping": //continue-shopping
             	System.err.println("backs");
             	WebElement shopping = wait.until(ExpectedConditions.elementToBeClickable(By.id("continue-shopping")));
@@ -90,21 +96,21 @@ public class NavigationCheck {
             	WebElement dropdown = driver.findElement(By.className("product_sort_container"));
             	Select option = new Select(dropdown);
             	option.selectByValue("lohi");
-            	Thread.sleep(2000);
+//            	Thread.sleep(2000);
             	Select option2 = new Select(driver.findElement(By.className("product_sort_container")));
             	option2.selectByValue("hilo");
             
-            	Thread.sleep(2000);
+//            	Thread.sleep(2000);
             	Select option3 = new Select(driver.findElement(By.className("product_sort_container")));
             	option3.selectByValue("az");
-            	Thread.sleep(2000);
+//            	Thread.sleep(2000);
             	Select option4 = new Select(driver.findElement(By.className("product_sort_container")));
             	option4.selectByValue("za");
             	break;
            
             	
 			default:
-				System.out.println("Not For Elenment"+steps.toString());
+				System.out.println("Not For Elenment"+steps);
 				break;
 			}
 		}

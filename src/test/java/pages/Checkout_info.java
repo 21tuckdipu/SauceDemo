@@ -48,7 +48,7 @@ public class Checkout_info {
 		}
 		catch (Exception e) {
 			System.out.println("Connection not Established");
-			System.out.println(e);
+//			System.out.println(e);
 		}
 		
 		FileInputStream reader = new FileInputStream("D:\\quash\\RelatedDoc\\Framework_repos\\sauceDemo.xlsx");
