@@ -25,7 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckOut {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException {
 		ChromeOptions opt = new ChromeOptions() ;
 		opt.addArguments("--disable-notifications");
 		WebDriver driver = new ChromeDriver(opt);
@@ -42,7 +42,7 @@ public class CheckOut {
 		
 		try {
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","password");
-			Statement st = (Statement) conn.createStatement();
+			Statement st =  conn.createStatement();
 			
 			String query = "select * from saucedemo";
 			ResultSet res = st.executeQuery(query);
