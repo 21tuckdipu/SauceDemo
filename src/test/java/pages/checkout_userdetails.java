@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,7 +28,11 @@ public class checkout_userdetails {
 		String A = "";
 		String B = "";
 		String C = "";
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("--disable-features=PasswordManager");
+		opt.addArguments("--disable-save-password-bubble");
+		opt.addArguments("--incognito");
+		WebDriver driver = new ChromeDriver(opt);
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(35));

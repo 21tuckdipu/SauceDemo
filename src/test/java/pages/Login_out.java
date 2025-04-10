@@ -23,7 +23,7 @@ public class Login_out {
 		
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--disable-notifications");
-		opt.addArguments("--disable-password-manager-reauthentication");
+		opt.addArguments("--incognito");
 		opt.addArguments("--disable-save-password-bubble");
 		WebDriver driver = new ChromeDriver(opt);
 		driver.get("https://www.saucedemo.com/");
